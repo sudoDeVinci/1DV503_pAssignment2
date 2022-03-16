@@ -176,7 +176,7 @@ def print_products_of_brand(brand):
     cursor = cnx.cursor(named_tuple=True)
 
     cursor.execute("""
-        SELECT p.*, b.name brand_name FROM productCategoryAncestryLine p
+        SELECT p.*, b.name brand_name FROM product_category_ancestry_line p
         INNER JOIN brand b ON b.id = p.brand_id
         WHERE brand_id = %s
         ORDER BY created_at;
@@ -269,7 +269,7 @@ def get_products_by_partial_name(name):
     cursor = cnx.cursor(named_tuple=True)
 
     cursor.execute("""
-        SELECT p.*, b.name brand_name FROM productCategoryAncestryLine p
+        SELECT p.*, b.name brand_name FROM product_category_ancestry_line p
         INNER JOIN brand b ON b.id = p.brand_id
         WHERE concat(b.name, " ", p.name) LIKE %s;
     """, ['%' + name + '%'])

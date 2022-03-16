@@ -74,7 +74,7 @@ def init_db():
     """)
 
     cursor.execute("""
-        CREATE OR REPLACE VIEW productCategoryAncestryLine AS
+        CREATE OR REPLACE VIEW product_category_ancestry_line AS
         SELECT p.*, GROUP_CONCAT(c.name ORDER BY depth DESC SEPARATOR " -> ") categories FROM product p
         INNER JOIN category_closure cc ON cc.descendant_id = p.category_id
         INNER JOIN category c ON c.id = cc.ancestor_id
