@@ -1,8 +1,7 @@
 import mysql.connector
 
-# cnx_obj = {'val': None}
 cnx = None
-DB_NAME = "db_pa_23456"
+DB_NAME = "db_pa_2"
 
 cnx = mysql.connector.connect(user='root', password='root',
                               host='localhost')
