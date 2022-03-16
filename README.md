@@ -10,4 +10,4 @@ Default credentials are used if nothing is changed.
 
 # USAGE
 To run:
-```python \src\clip.py```
+```python \src\cli.py```
