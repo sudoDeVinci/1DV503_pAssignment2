@@ -59,7 +59,7 @@ Leave parent category blank if none applies.\033[0m \n""")
         services.insert_category(category, parent)
     except Exception as e:
         print("\n\033[91mPlease check category data and retry\033[0m \n")
-        print(e)
+         
     print("\n------------------------------------------------------------------")
 
 
@@ -89,7 +89,7 @@ def insert_product():
         services.insert_product(name, description, price, category_id, brand_id)
     except Exception as e:
         print("\n\033[91mPlease check product data and retry\033[0m \n")
-        print(e)
+         
     print("\n------------------------------------------------------------------")
 
 
@@ -107,7 +107,7 @@ def print_products_of_brand():
         services.print_products_of_brand(brand_id)
     except Exception as e:
         print("\n\033[91mPlease check brand name and retry\033[0m \n")
-        print(e)
+         
     print("\n------------------------------------------------------------------")
 
 
@@ -124,7 +124,7 @@ def insert_brand():
         services.insert_brand(brand)
     except Exception as e:
         print("\n\033[91mPlease check brand name and retry\033[0m \n")
-        print(e)
+         
     print("\n------------------------------------------------------------------") 
 
 
@@ -164,7 +164,7 @@ def create_account():
         print(f"\n\033[0;32m{role} account {username} created successfully.\033[0m \n")
     except Exception as e:
         print("\n\033[91mPlease check credentials name and retry\033[0m \n")
-        print(e)
+         
     print("\n------------------------------------------------------------------") 
 
 
@@ -182,7 +182,7 @@ def partial_name_search():
         results = services.get_products_by_partial_name(product)
     except Exception as e:
         print("\n\033[91mPlease check search term and try again.\033[0m \n")
-        print(e)
+         
         return 0
 
     if len(results) == 0:
