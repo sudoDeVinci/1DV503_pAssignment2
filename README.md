@@ -11,3 +11,9 @@ Default credentials are used if nothing is changed.
 ## USAGE
 To run:
 ```python \src\cli.py```
+
+## Default user accounts:
+### USER: 
+username: 'user' password: 'user'
+### ADMIN:
+username: 'admin' password: 'admin'
